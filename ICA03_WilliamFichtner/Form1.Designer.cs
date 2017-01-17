@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.ColorGroupBox = new System.Windows.Forms.GroupBox();
-            this.UI_RedRadial = new System.Windows.Forms.RadioButton();
-            this.UI_GreenRadial = new System.Windows.Forms.RadioButton();
             this.UI_BlueRadial = new System.Windows.Forms.RadioButton();
+            this.UI_GreenRadial = new System.Windows.Forms.RadioButton();
+            this.UI_RedRadial = new System.Windows.Forms.RadioButton();
             this.UI_BorderCheckbox = new System.Windows.Forms.CheckBox();
             this.UI_BorderThickLabel = new System.Windows.Forms.Label();
             this.UI_ThicknessUpDown = new System.Windows.Forms.NumericUpDown();
@@ -52,28 +52,6 @@
             this.ColorGroupBox.TabStop = false;
             this.ColorGroupBox.Text = "Color";
             // 
-            // UI_RedRadial
-            // 
-            this.UI_RedRadial.AutoSize = true;
-            this.UI_RedRadial.Location = new System.Drawing.Point(29, 30);
-            this.UI_RedRadial.Name = "UI_RedRadial";
-            this.UI_RedRadial.Size = new System.Drawing.Size(45, 17);
-            this.UI_RedRadial.TabIndex = 0;
-            this.UI_RedRadial.TabStop = true;
-            this.UI_RedRadial.Text = "Red";
-            this.UI_RedRadial.UseVisualStyleBackColor = true;
-            // 
-            // UI_GreenRadial
-            // 
-            this.UI_GreenRadial.AutoSize = true;
-            this.UI_GreenRadial.Location = new System.Drawing.Point(29, 65);
-            this.UI_GreenRadial.Name = "UI_GreenRadial";
-            this.UI_GreenRadial.Size = new System.Drawing.Size(54, 17);
-            this.UI_GreenRadial.TabIndex = 1;
-            this.UI_GreenRadial.TabStop = true;
-            this.UI_GreenRadial.Text = "Green";
-            this.UI_GreenRadial.UseVisualStyleBackColor = true;
-            // 
             // UI_BlueRadial
             // 
             this.UI_BlueRadial.AutoSize = true;
@@ -86,6 +64,30 @@
             this.UI_BlueRadial.UseVisualStyleBackColor = true;
             this.UI_BlueRadial.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
+            // UI_GreenRadial
+            // 
+            this.UI_GreenRadial.AutoSize = true;
+            this.UI_GreenRadial.Location = new System.Drawing.Point(29, 65);
+            this.UI_GreenRadial.Name = "UI_GreenRadial";
+            this.UI_GreenRadial.Size = new System.Drawing.Size(54, 17);
+            this.UI_GreenRadial.TabIndex = 1;
+            this.UI_GreenRadial.TabStop = true;
+            this.UI_GreenRadial.Text = "Green";
+            this.UI_GreenRadial.UseVisualStyleBackColor = true;
+            this.UI_GreenRadial.CheckedChanged += new System.EventHandler(this.UI_GreenRadial_CheckedChanged);
+            // 
+            // UI_RedRadial
+            // 
+            this.UI_RedRadial.AutoSize = true;
+            this.UI_RedRadial.Location = new System.Drawing.Point(29, 30);
+            this.UI_RedRadial.Name = "UI_RedRadial";
+            this.UI_RedRadial.Size = new System.Drawing.Size(45, 17);
+            this.UI_RedRadial.TabIndex = 0;
+            this.UI_RedRadial.TabStop = true;
+            this.UI_RedRadial.Text = "Red";
+            this.UI_RedRadial.UseVisualStyleBackColor = true;
+            this.UI_RedRadial.CheckedChanged += new System.EventHandler(this.UI_RedRadial_CheckedChanged);
+            // 
             // UI_BorderCheckbox
             // 
             this.UI_BorderCheckbox.AutoSize = true;
@@ -95,6 +97,7 @@
             this.UI_BorderCheckbox.TabIndex = 1;
             this.UI_BorderCheckbox.Text = "Border";
             this.UI_BorderCheckbox.UseVisualStyleBackColor = true;
+            this.UI_BorderCheckbox.CheckedChanged += new System.EventHandler(this.UI_BorderCheckbox_CheckedChanged);
             // 
             // UI_BorderThickLabel
             // 
@@ -102,24 +105,41 @@
             this.UI_BorderThickLabel.Location = new System.Drawing.Point(230, 81);
             this.UI_BorderThickLabel.Name = "UI_BorderThickLabel";
             this.UI_BorderThickLabel.Size = new System.Drawing.Size(90, 13);
-            this.UI_BorderThickLabel.TabIndex = 2;
+            this.UI_BorderThickLabel.TabIndex = 4;
             this.UI_BorderThickLabel.Text = "Border Thickness";
             // 
             // UI_ThicknessUpDown
             // 
             this.UI_ThicknessUpDown.Location = new System.Drawing.Point(326, 79);
+            this.UI_ThicknessUpDown.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.UI_ThicknessUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.UI_ThicknessUpDown.Name = "UI_ThicknessUpDown";
             this.UI_ThicknessUpDown.Size = new System.Drawing.Size(39, 20);
-            this.UI_ThicknessUpDown.TabIndex = 3;
+            this.UI_ThicknessUpDown.TabIndex = 2;
+            this.UI_ThicknessUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.UI_ThicknessUpDown.ValueChanged += new System.EventHandler(this.UI_ThicknessUpDown_ValueChanged);
             // 
             // UI_DrawButton
             // 
             this.UI_DrawButton.Location = new System.Drawing.Point(195, 211);
             this.UI_DrawButton.Name = "UI_DrawButton";
             this.UI_DrawButton.Size = new System.Drawing.Size(75, 23);
-            this.UI_DrawButton.TabIndex = 4;
+            this.UI_DrawButton.TabIndex = 3;
             this.UI_DrawButton.Text = "Draw Circle";
             this.UI_DrawButton.UseVisualStyleBackColor = true;
+            this.UI_DrawButton.Click += new System.EventHandler(this.UI_DrawButton_Click);
             // 
             // Form1
             // 
